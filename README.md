@@ -22,6 +22,7 @@ Learning Structured Query Language
 ```console
     LIKE <regular_expression>
 ```
+
 - Concatenate the results of a query into a single row
 ```console
     GROUP_CONCAT(<query_returning_multiple_row_values>)
@@ -46,7 +47,29 @@ Learning Structured Query Language
 ```console
     WHERE <conditions>
 ```
+
 - Specify conditions to query groups from a table, after GROUP BY has been applied 
-``` console
+```console
     HAVING <conditions>
+```
+
+- Extract a substring. 1-based indexing is followed in MySQL
+```console
+    SUBSTR(<string>,<beginning_index>,<number_of_characters_to_be_extracted>)
+    SUBSTR(<string>,<beginning_index>)              
+```
+
+- Concatenate strings and varchars
+```console
+    CONCAT(<first_substring>,<second_substring>)
+```
+
+- Change to upper case
+```console 
+    UPPER(<string>)
+```
+
+- Change to lower case
+```console
+    LOWER(<string>)
 ```
