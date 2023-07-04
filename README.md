@@ -73,3 +73,67 @@ Learning Structured Query Language
 ```console
     LOWER(<string>)
 ```
+
+- Check a value against multiple rows from a subquery
+```console
+    IN(<conditions>)
+```
+
+- Switch-Case Statement
+```console
+    CASE
+    WHEN <conditions> THEN <actions>
+    WHEN <conditions> THEN <actions>
+    ELSE <actions>
+    END
+```
+
+- If Statement
+```console
+    IF(<conditions>,<actions_if_conditions_satisfied>,<actions_in_else>)
+```
+
+- Alter and Rename the Column name
+```console
+    ALTER <table_name>
+    RENAME COLUMN <old_column_name> <new_column_name>
+```
+
+- Update values in a Row, If the row is not present then nothing happens
+```console 
+    UPDATE <table_name>
+    SET <column_no = value>, <column_no = value>
+    WHERE <primary_key=row_id>
+```
+
+- Insert values in a Row
+```console
+    INSERT INTO <table_name>
+    (
+        <first_column_name>, <second_column_name>
+
+    )
+    VALUES 
+    (
+        <first_value>, <second_value>
+    )
+```
+
+- Replace values in a Row, If the row is not present, then a new row is created. Replace = Insert+Update
+```console
+    REPLACE INTO <table_name>
+    (
+        <first_column_name>, <second_column_name>
+
+    )
+    VALUES 
+    (
+        <first_value>, <second_value>
+    )
+```
+
+- Rename the Table
+```console
+    ALTER TABLE <old_table_name> 
+    RENAME TO <new_table_name>
+```
